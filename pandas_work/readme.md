@@ -1,11 +1,10 @@
-Error :
-
+Error / Issues:
 (venv) PS C:\Users\hp\PycharmProjects\Robotic_Framework_Assignments\tests> robot csv2ui2xl.robot
 ==============================================================================
 Csv2Ui2Xl :: Multi-user login verification (positive + negative) using pand...
 ==============================================================================
 Positive Login Tests :: One test per user with correct password ->... 
-DevTools listening on ws://127.0.0.1:49632/devtools/browser/a4425b47-3d64-46a8-8534-fdb39b13d2b6
+DevTools listening on ws://127.0.0.1:50761/devtools/browser/1193e28b-21b0-4c61-a3aa-7d4aa7863ad9
 ..
 === Test 1: standard_user / secret_sauce (expect success) ===
 
@@ -14,7 +13,7 @@ Positive Login Tests :: One test per user with correct password ->... | FAIL |
 Element with locator 'id=user-name' not found.
 ------------------------------------------------------------------------------
 Negative Login Tests :: One test per user with correct password ->... 
-DevTools listening on ws://127.0.0.1:61211/devtools/browser/35c04c66-f34f-4665-a4cb-329999e69a7b
+DevTools listening on ws://127.0.0.1:59658/devtools/browser/a15c1960-4a43-4778-93c5-ea2038f36da5
 ..
 === Test 3: standard_user / wrong_password (expect fail) ===
 
