@@ -1,0 +1,136 @@
+C:\Users\hp\PycharmProjects\file_comparison_tool\.venv\Scripts\python.exe C:\Users\hp\PycharmProjects\file_comparison\file2file.py 
+Enter path to first file: input/file1.pdf
+Enter type of first file (pdf, docx, excel, csv, txt, dat): pdf
+Enter path to second file: input/file2.docx
+Enter type of second file (pdf, docx, excel, csv, txt, dat): docx
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:32: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_numeric without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_numeric(df[col].str.replace(',', '') if df[col].dtype == 'object' else df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_datetime without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:32: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_numeric without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_numeric(df[col].str.replace(',', '') if df[col].dtype == 'object' else df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_datetime without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:32: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_numeric without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_numeric(df[col].str.replace(',', '') if df[col].dtype == 'object' else df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_datetime without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:32: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_numeric without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_numeric(df[col].str.replace(',', '') if df[col].dtype == 'object' else df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_datetime without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:32: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_numeric without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_numeric(df[col].str.replace(',', '') if df[col].dtype == 'object' else df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_datetime without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:32: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_numeric without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_numeric(df[col].str.replace(',', '') if df[col].dtype == 'object' else df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_datetime without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:32: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_numeric without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_numeric(df[col].str.replace(',', '') if df[col].dtype == 'object' else df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_datetime without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:32: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_numeric without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_numeric(df[col].str.replace(',', '') if df[col].dtype == 'object' else df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_datetime without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: UserWarning: Parsing dates in %d-%m-%Y format when dayfirst=False (the default) was specified. Pass `dayfirst=True` or specify a format to silence this warning.
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:32: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_numeric without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_numeric(df[col].str.replace(',', '') if df[col].dtype == 'object' else df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_datetime without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:32: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_numeric without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_numeric(df[col].str.replace(',', '') if df[col].dtype == 'object' else df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_datetime without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:32: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_numeric without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_numeric(df[col].str.replace(',', '') if df[col].dtype == 'object' else df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_datetime without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:32: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_numeric without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_numeric(df[col].str.replace(',', '') if df[col].dtype == 'object' else df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_datetime without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:32: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_numeric without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_numeric(df[col].str.replace(',', '') if df[col].dtype == 'object' else df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_datetime without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:32: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_numeric without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_numeric(df[col].str.replace(',', '') if df[col].dtype == 'object' else df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_datetime without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:32: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_numeric without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_numeric(df[col].str.replace(',', '') if df[col].dtype == 'object' else df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_datetime without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:32: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_numeric without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_numeric(df[col].str.replace(',', '') if df[col].dtype == 'object' else df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: FutureWarning: errors='ignore' is deprecated and will raise in a future version. Use to_datetime without passing `errors` and catch exceptions explicitly instead
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+C:\Users\hp\PycharmProjects\file_comparison\file2file.py:36: UserWarning: Parsing dates in %d-%m-%Y format when dayfirst=False (the default) was specified. Pass `dayfirst=True` or specify a format to silence this warning.
+  df[col] = pd.to_datetime(df[col], errors='ignore')
+Mismatched columns: {'Company Name', 'Emp ID', 'Emp\nID', 'Company\nName'}
+
+Data mismatches found:
+Row 1 mismatch: {'Designation': ('Senior Data\nScientist', 'Senior Data Scientist'), 'Full Name': ('Aaradhya\nSharma', 'Aaradhya Sharma')}
+Row 2 mismatch: {'Designation': ('Lead DevOps\nEngineer', 'Lead DevOps Engineer'), 'Department': ('Cloud\nOperations', 'Cloud Operations'), 'Full Name': ('Vihaan\nSingh\nRajput', 'Vihaan Singh Rajput')}
+Row 3 mismatch: {'Designation': ('UX/UI\nDesigner', 'UX/UI Designer'), 'Full Name': ('María\nGonzález\nLópe', 'María González Lópe')}
+Row 4 mismatch: {'Designation': ('Principal\nArchitect', 'Principal Architect'), 'Full Name': ('???\n(Chan Wai\nKeung)', '??? (Chan Wai Keung)')}
+Row 5 mismatch: {'Designation': ('Financial\nController', 'Financial Controller'), 'Full Name': ('Priyanka\nChatterjee', 'Priyanka Chatterjee')}
+Row 6 mismatch: {'Designation': ('Cybersecurity\nSpecialist', 'Cybersecurity Specialist'), 'Full Name': ('Mohammed\nAl-Farsi', 'Mohammed Al-Farsi')}
+Row 7 mismatch: {'Designation': ('Marketing\nHead\n(Europe)', 'Marketing Head (Europe)'), 'Full Name': ('Éléonore\nDubois', 'Éléonore Dubois')}
+Row 8 mismatch: {'Designation': ('Sr. Manager\n– Operations', 'Sr. Manager – Operations'), 'Full Name': ('Rajesh\nKumar\nYadav', 'Rajesh Kumar Yadav')}
+Row 9 mismatch: {'Designation': ('AI/ML\nEngineer', 'AI/ML Engineer'), 'Full Name': ('Sofia\nAndersson', 'Sofia Andersson')}
+Row 10 mismatch: {'Designation': ('Product\nManager', 'Product Manager'), 'Full Name': ('???\n(Kim Ji-eun)', '???  (Kim Ji-eun)')}
+Row 11 mismatch: {'Designation': ('Cloud\nSolutions\nArchitect', 'Cloud Solutions Architect'), 'Full Name': ('Liam\nO’Connor', 'Liam O’Connor')}
+Row 12 mismatch: {'Designation': ('Frontend\nDeveloper', 'Frontend Developer'), 'Full Name': ('????\n(Sato\nMisaki)', '????  (Sato Misaki)')}
+Row 13 mismatch: {'Designation': ('Machine\nLearning\nEngineer', 'Machine Learning Engineer'), 'Full Name': ('??\n(Zhang Wei)', '??  (Zhang Wei)')}
+Row 14 mismatch: {'Full Name': ('Lara\nSchmidt', 'Lara Schmidt')}
+Row 15 mismatch: {'Designation': ('Network\nSecurity\nEngineer', 'Network Security Engineer'), 'Full Name': ('Diego\nFernández', 'Diego Fernández')}
+Row 16 mismatch: {'Designation': ('Scrum\nMaster', 'Scrum Master'), 'Full Name': ('Kavya\nReddy', 'Kavya Reddy')}
+Row 17 mismatch: {'Designation': ('Technical\nWriter', 'Technical Writer'), 'Full Name': ('Olga\nPetrova', 'Olga Petrova')}
+Row 18 mismatch: {'Designation': ('Business\nAnalyst', 'Business Analyst')}
+Row 19 mismatch: {'Designation': ('HR Business\nPartner', 'HR Business Partner'), 'Full Name': ('Emma\nWilson', 'Emma Wilson')}
+
+Traceback (most recent call last):
+  File "C:\Users\hp\PycharmProjects\file_comparison\file2file.py", line 111, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\hp\PycharmProjects\file_comparison\file2file.py", line 106, in main
+    compare_dataframes(df1, df2, log_file)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\PycharmProjects\file_comparison\file2file.py", line 81, in compare_dataframes
+    log.write(msg)
+    ~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 599-601: character maps to <undefined>
+
+Process finished with exit code 1
