@@ -1,0 +1,7 @@
+All columns match.
+Row 1 mismatch: {'Date of Joining': ('15-0-2018', '15-03-2018'), 'Full Name': ('Aahya Sharma', 'Aaradhya Sharma')}
+Row 5 mismatch: {'Date of Joining': ('17-5-2019', '17-05-2019')}
+Row 10 mismatch: {'Full Name': ('김은 (Kim Ji-eun)', '김지은 (Kim Ji-eun)')}
+Row 12 mismatch: {'Full Name': ('佐藤美 (Sato Misaki)', '佐藤美咲 (Sato Misaki)')}
+Row 13 mismatch: {'Full Name': ('張 (Zhang Wei)', '張偉 (Zhang Wei)')}
+Row 15 mismatch: {'Full Name': ('Diego Fernáez', 'Diego Fernández')}
