@@ -75,8 +75,10 @@ def read_file(file_path, file_type):
     else:
         raise ValueError(f"Unsupported file type: {file_type}")
 
+    # Normalize headers
     df.columns = [normalize_text(col) for col in df.columns]
 
+    # Normalize cell values
     for col in df.columns:
         df[col] = df[col].apply(normalize_null)
         df[col] = df[col].apply(normalize_text)
@@ -87,9 +89,9 @@ def read_file(file_path, file_type):
 
 
 # ************************************************************ #
-# HTML Diff Visualization (WITH FILE NAMES)
+# HTML Diff Visualization  (WITH FILE NAMES)
 # ************************************************************ #
-def generate_html_diff(mismatches, output_file, file1_name, file2_name):
+def generate_html_diff(mismatches, output_file, file1_name, file2_name, key_col):
     html = f"""
     <html>
     <head>
@@ -103,13 +105,16 @@ def generate_html_diff(mismatches, output_file, file1_name, file2_name):
         </style>
     </head>
     <body>
-    <h2>Data Comparison - Difference Report</h2>
-    <p><b>File 1:</b> {file1_name}<br>
-       <b>File 2:</b> {file2_name}</p>
+    <h2>Data Comparison – Difference Report</h2>
+    <p>
+        <b>Key Column:</b> {key_col}<br>
+        <b>File 1:</b> {file1_name}<br>
+        <b>File 2:</b> {file2_name}
+    </p>
     """
 
-    for emp_id, diff_data in mismatches.items():
-        html += f"<h3>Emp ID: {emp_id}</h3>"
+    for key, diff_data in mismatches.items():
+        html += f"<h3>{key_col}: {key}</h3>"
         html += "<table>"
         html += f"<tr><th>Column</th><th>{file1_name}</th><th>{file2_name}</th></tr>"
 
@@ -133,11 +138,7 @@ def generate_html_diff(mismatches, output_file, file1_name, file2_name):
 # ************************************************************ #
 # Compare DataFrames (KEY-BASED)
 # ************************************************************ #
-def compare_dataframes(df1, df2, log_file, file1_name, file2_name):
-
-    key_input = input("Enter key column name (e.g., Emp ID): ")
-    KEY_COL = normalize_text(key_input)
-
+def compare_dataframes(df1, df2, log_file, file1_name, file2_name, KEY_COL):
     html_mismatches = {}
 
     with open(log_file, 'w', encoding='utf-8') as log:
@@ -148,14 +149,54 @@ def compare_dataframes(df1, df2, log_file, file1_name, file2_name):
             log.write(f"{file1_name} columns: {list(df1.columns)}\n")
             log.write(f"{file2_name} columns: {list(df2.columns)}\n\n")
 
-        # Key existence
-        if KEY_COL not in df1.columns or KEY_COL not in df2.columns:
-            log.write(f"Key column '{KEY_COL}' missing in one or both files\n")
+        # Key column validation
+        if KEY_COL not in df1.columns:
+            log.write(f"Key column '{KEY_COL}' missing in {file1_name}\n")
             return
 
+        if KEY_COL not in df2.columns:
+            log.write(f"Key column '{KEY_COL}' missing in {file2_name}\n")
+            return
+
+        # -----------------------------------------------------
+        # Key value validation (NULL / empty keys)
+        # -----------------------------------------------------
+        invalid_keys_f1 = df1[df1[KEY_COL].astype(str).str.strip() == '']
+        invalid_keys_f2 = df2[df2[KEY_COL].astype(str).str.strip() == '']
+
+        if not invalid_keys_f1.empty:
+            log.write(
+                f"WARNING: {len(invalid_keys_f1)} rows in {file1_name} have NULL/empty {KEY_COL}. "
+                f"Key columns should not be null/empty.\n"
+            )
+
+        if not invalid_keys_f2.empty:
+            log.write(
+                f"WARNING: {len(invalid_keys_f2)} rows in {file2_name} have NULL/empty {KEY_COL}. "
+                f"Key columns should not be null/empty.\n"
+            )
+
+        # Drop invalid key rows
+        df1 = df1[df1[KEY_COL].astype(str).str.strip() != '']
+        df2 = df2[df2[KEY_COL].astype(str).str.strip() != '']
+
+        # Stop if no valid keys remain
+        if df1.empty or df2.empty:
+            log.write(
+                f"ERROR: No valid {KEY_COL} values left after removing NULL/empty keys. "
+                f"Comparison aborted.\n"
+            )
+            return
+
+        # ************************************************************ #
         # Duplicate key detection
-        if df1[KEY_COL].duplicated().any() or df2[KEY_COL].duplicated().any():
-            log.write("Duplicate Emp IDs detected. Comparison aborted.\n")
+        # ************************************************************ #
+        if df1[KEY_COL].duplicated().any():
+            log.write(f"Duplicate keys found in {file1_name}\n")
+            return
+
+        if df2[KEY_COL].duplicated().any():
+            log.write(f"Duplicate keys found in {file2_name}\n")
             return
 
         df1 = df1.set_index(KEY_COL)
@@ -164,10 +205,10 @@ def compare_dataframes(df1, df2, log_file, file1_name, file2_name):
         keys1, keys2 = set(df1.index), set(df2.index)
 
         for k in keys1 - keys2:
-            log.write(f"Emp ID {k} present in {file1_name} but missing in {file2_name}\n")
+            log.write(f"{KEY_COL} {k} present in {file1_name} but missing in {file2_name}\n")
 
         for k in keys2 - keys1:
-            log.write(f"Emp ID {k} present in {file2_name} but missing in {file1_name}\n")
+            log.write(f"{KEY_COL} {k} present in {file2_name} but missing in {file1_name}\n")
 
         common_keys = keys1 & keys2
         non_key_cols = [c for c in df1.columns if c in df2.columns]
@@ -181,14 +222,20 @@ def compare_dataframes(df1, df2, log_file, file1_name, file2_name):
                     col: (row1[col], row2[col])
                     for col in non_key_cols if diff[col]
                 }
-                log.write(f"Mismatch for Emp ID {key}: {html_mismatches[key]}\n")
+                log.write(f"Mismatch for {KEY_COL} {key}: {html_mismatches[key]}\n")
 
         if not html_mismatches:
             log.write("All records matched successfully.\n")
 
     if html_mismatches:
         html_file = log_file.replace(".log", "_diff.html")
-        generate_html_diff(html_mismatches, html_file, file1_name, file2_name)
+        generate_html_diff(
+            html_mismatches,
+            html_file,
+            file1_name,
+            file2_name,
+            KEY_COL
+        )
         print(f"HTML diff generated: {html_file}")
 
 
@@ -198,8 +245,12 @@ def compare_dataframes(df1, df2, log_file, file1_name, file2_name):
 def main():
     file1_path = input("Enter path to first file: ")
     file1_type = input("Enter type of first file: ")
+
     file2_path = input("Enter path to second file: ")
     file2_type = input("Enter type of second file: ")
+
+    key_input = input("Enter key column name (e.g., Emp ID): ")
+    KEY_COL = normalize_text(key_input)
 
     df1 = read_file(file1_path, file1_type)
     df2 = read_file(file2_path, file2_type)
@@ -218,7 +269,7 @@ def main():
         run += 1
         log_file = f"logs/{log_base}{run}.log"
 
-    compare_dataframes(df1, df2, log_file, file1_name, file2_name)
+    compare_dataframes(df1, df2, log_file, file1_name, file2_name, KEY_COL)
     print(f"Log saved to: {log_file}")
 
 
